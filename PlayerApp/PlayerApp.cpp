@@ -60,5 +60,6 @@ int main()
     player2.setPlayerName("Legend");
     cout << player1.dumpPlayerClass();
     cout << player2.dumpPlayerClass();
+    cout << "Hello world";
 
 }
