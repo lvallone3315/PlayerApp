@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -19,6 +20,7 @@ class Player {
 private:
     string playerName = "?";
     char outputBuffer[BUFFER_SIZE];
+    string playerHairColor = "";
 
     // public methods: store and retrieve player name for this object instance
 public:
@@ -38,6 +40,20 @@ public:
     //   should overload for c_strings (ie getPlayerName returning c_string instead of string)
     string getPlayerName() {
         return (playerName);
+    }
+
+
+    // sets player name to name - limited to string class
+    //    should overload for c_strings
+    void setPlayerHairColor(string hairColor) {
+        playerHairColor = hairColor;
+    }
+
+
+    // sets player name to name - limited to string class
+    //    should overload for c_strings
+    string getPlayerHairColor() {
+        return (playerHairColor);
     }
 
     // returns all class data structures in easily readable form as a c_string
@@ -60,6 +76,7 @@ int main()
     player2.setPlayerName("Legend");
     cout << player1.dumpPlayerClass();
     cout << player2.dumpPlayerClass();
-    cout << "Hello world";
-
+    cout << "Hello world\n";
+    player1.setPlayerHairColor("Blue");
+    cout << "player 1's hair color is: " << player1.getPlayerHairColor();
 }
