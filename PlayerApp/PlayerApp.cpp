@@ -77,6 +77,7 @@ int main()
     cout << player1.dumpPlayerClass();
     cout << player2.dumpPlayerClass();
     cout << "Hello world\n";
+    // Blue hair is an unrealistic color.
     player1.setPlayerHairColor("Blue");
     cout << "player 1's hair color is: " << player1.getPlayerHairColor();
 }
