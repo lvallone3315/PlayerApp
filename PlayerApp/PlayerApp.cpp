@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 #include <stdlib.h>
+#include "PlayerUI.h"
 
 using namespace std;
 
@@ -68,7 +69,12 @@ public:
 
 int main()
 {
-    Player player1;
+    PlayerUI console;
+
+    console.writeOutput("Hello World!\n"); 
+    console.getUserInput("Please enter your name: ");
+    
+    /* Player player1;
     Player player2;
 
     std::cout << "Hello World!\n";
@@ -80,4 +86,5 @@ int main()
     // Blue hair is an unrealistic color.
     player1.setPlayerHairColor("Blue");
     cout << "player 1's hair color is: " << player1.getPlayerHairColor();
+    */
 }
