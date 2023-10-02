@@ -69,10 +69,22 @@ public:
 
 int main()
 {
+    Player* newTest(string playerName);
+    Player declarationTest(string playerName);
+
     PlayerUI console;
 
     console.writeOutput("Hello World!\n"); 
     console.getUserInput("Please enter your name: ");
+
+    Player* lee = newTest("Lee");
+    console.writeOutput(lee->getPlayerName() + "\n");
+
+    Player leeDec = declarationTest("LeeDec");
+    Player p2 = declarationTest("p2");
+    Player p3 = declarationTest("p3");
+
+    console.writeOutput(leeDec.getPlayerName());
     
     /* Player player1;
     Player player2;
@@ -87,4 +99,16 @@ int main()
     player1.setPlayerHairColor("Blue");
     cout << "player 1's hair color is: " << player1.getPlayerHairColor();
     */
+}
+
+Player* newTest(string playerName) {
+    Player* p = new Player();
+    p->setPlayerName(playerName);
+    return p;
+}
+
+Player declarationTest(string playerName) {
+    Player p;
+    p.setPlayerName(playerName);
+    return p;
 }
